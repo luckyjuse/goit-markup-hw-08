@@ -1,0 +1,40 @@
+.projects {
+  padding-top: 0px;
+  padding-bottom: 94px;
+}
+.projects-title {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+.projects-list {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+.projects-item {
+  position: relative;
+}
+.projects-description {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--secondary-text-color);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(
+    rgba(47, 48, 58, 0.8),
+    rgba(47, 48, 58, 0.8)
+  );
+}

@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  background: var(--background-main-color);
+  color: var(--title-text-color);
+  font-family: var(--main-font), sans-serif;
+}
+.container {
+  margin: 0 auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}

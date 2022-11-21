@@ -1,0 +1,86 @@
+.benefits {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.visualy-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.benefits-list {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+.benefits-item {
+  width: 270px;
+  &:nth-child(1)::before {
+    content: '';
+    display: block;
+    width: 270px;
+    height: 120px;
+    border-radius: 4px;
+    background-image: url(../images/sputnik.svg);
+    background-color: var(--background-secondary-color);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 30px;
+  }
+  &:nth-child(2)::before {
+    content: '';
+    display: block;
+    width: 270px;
+    height: 120px;
+    border-radius: 4px;
+    background-image: url(../images/clock.svg);
+    background-color: var(--background-secondary-color);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 30px;
+  }
+  &:nth-child(3)::before {
+    content: '';
+    display: block;
+    width: 270px;
+    height: 120px;
+    border-radius: 4px;
+    background-image: url(../images/diagram.svg);
+    background-color: var(--background-secondary-color);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 30px;
+  }
+  &:nth-child(4)::before {
+    content: '';
+    display: block;
+    width: 270px;
+    height: 120px;
+    border-radius: 4px;
+    background-image: url(../images/astronaut.svg);
+    background-color: var(--background-secondary-color);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 30px;
+  }
+}
+.benefits-title {
+  margin-bottom: 10px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+.benefits-description {
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--paragraph-text-color);
+}
