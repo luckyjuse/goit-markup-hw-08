@@ -45,6 +45,7 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  width: 100%;
 }
 
 body {
@@ -56,9 +57,24 @@ body {
 
 .container {
   margin: 0 auto;
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 .list {
@@ -68,7 +84,7 @@ body {
 }
 
 .button {
-  padding: 10px 32px;
+  padding: 10px 24px;
   border-radius: 4px;
   border: 0px;
   font-family: inherit;
@@ -85,6 +101,11 @@ body {
 }
 .button:hover, .button:focus {
   background-color: var(--hover-focus-color);
+}
+@media screen and (min-width: 1200px) {
+  .button {
+    padding: 10px 32px;
+  }
 }
 
 .button-secondary {
@@ -440,15 +461,27 @@ body {
 }
 
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   text-align: center;
   background-color: var(--background-footer-color);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-background.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero-background-mobile.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   max-width: 1600px;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero-background-tablet.jpg);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero-background.jpg);
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 
 .margin__hero {
@@ -459,18 +492,36 @@ body {
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
-  width: 696px;
+  width: 100%;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--secondary-text-color);
 }
+@media screen and (min-width: 480px) {
+  .hero-title {
+    width: 360px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero-title {
+    font-size: 44px;
+    line-height: 1.36;
+    width: 696px;
+  }
+}
 
 .benefits {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .benefits {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .visualy-hidden {
@@ -489,17 +540,28 @@ body {
 
 .benefits-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
   list-style: none;
 }
 
 .benefits-item {
-  width: 270px;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .benefits-item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .benefits-item {
+    width: calc((100% - 90px) / 4);
+  }
 }
 .benefits-item:nth-child(1)::before {
   content: "";
   display: block;
-  width: 270px;
+  width: 100%;
   height: 120px;
   border-radius: 4px;
   background-image: url(../images/sputnik.svg);
@@ -511,7 +573,7 @@ body {
 .benefits-item:nth-child(2)::before {
   content: "";
   display: block;
-  width: 270px;
+  width: 100%;
   height: 120px;
   border-radius: 4px;
   background-image: url(../images/clock.svg);
@@ -523,7 +585,7 @@ body {
 .benefits-item:nth-child(3)::before {
   content: "";
   display: block;
-  width: 270px;
+  width: 100%;
   height: 120px;
   border-radius: 4px;
   background-image: url(../images/diagram.svg);
@@ -535,7 +597,7 @@ body {
 .benefits-item:nth-child(4)::before {
   content: "";
   display: block;
-  width: 270px;
+  width: 100%;
   height: 120px;
   border-radius: 4px;
   background-image: url(../images/astronaut.svg);
@@ -562,6 +624,12 @@ body {
 .projects {
   padding-top: 0px;
   padding-bottom: 94px;
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .projects {
+    display: block;
+  }
 }
 
 .projects-title {
@@ -602,37 +670,60 @@ body {
 }
 
 .team {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: var(--background-secondary-color);
+}
+@media screen and (min-width: 1200px) {
+  .team {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .team-title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
+}
+@media screen and (min-width: 1200px) {
+  .team-title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.16;
+  }
 }
 
 .team-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
   list-style: none;
 }
 
 .team-item {
+  width: 100%;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   text-align: center;
-  width: 270px;
   background-color: var(--background-main-color);
 }
-
-.team-item > div {
+.team-item div {
   padding-top: 30px;
   padding-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .team-item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team-item {
+    width: calc((100% - 90px) / 4);
+  }
 }
 
 .team-member {
@@ -681,28 +772,52 @@ body {
 }
 
 .clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .clients {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .clients-title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
+}
+@media screen and (min-width: 1200px) {
+  .clients-title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.16;
+  }
 }
 
 .clients-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
   list-style: none;
 }
 
 .clients-item {
-  width: 170px;
   height: 92px;
+  width: calc((100% - 30px) / 2);
+}
+@media screen and (min-width: 768px) {
+  .clients-item {
+    width: calc((100% - 60px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients-item {
+    width: calc((100% - 150px) / 6);
+  }
 }
 
 .clients-link {
@@ -739,11 +854,26 @@ body {
 
 .footer__container {
   display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
   align-items: baseline;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .footer__container {
+    text-align: left;
+    gap: 0;
+  }
 }
 
 .margin__adress-section {
-  margin-right: auto;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1200px) {
+  .margin__adress-section {
+    margin: 0;
+    margin-right: auto;
+  }
 }
 
 .adress-section__logo {
@@ -759,7 +889,6 @@ body {
 }
 
 .address {
-  width: 231px;
   font-style: normal;
 }
 
@@ -800,7 +929,13 @@ body {
 }
 
 .margin__soc-section {
-  margin-right: auto;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1200px) {
+  .margin__soc-section {
+    margin: 0;
+    margin-right: auto;
+  }
 }
 
 .soc-section__description {
@@ -843,6 +978,15 @@ body {
   border-radius: 50%;
 }
 
+.sub-section {
+  margin: 0 auto;
+}
+@media screen and (min-width: 1200px) {
+  .sub-section {
+    margin: 0;
+  }
+}
+
 .sub-section__description {
   margin-bottom: 20px;
   font-weight: 700;
@@ -855,14 +999,29 @@ body {
 
 .position__sub-form {
   display: flex;
-  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+@media screen and (min-width: 768px) {
+  .position__sub-form {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .position__sub-form {
+    padding-left: 0;
+    padding-right: 0;
+    gap: 12px;
+  }
 }
 
 .sub-form__input {
   color: var(--secondary-text-color);
   line-height: 1.25;
   letter-spacing: 0.03em;
-  width: 385px;
+  width: 100%;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
@@ -890,6 +1049,16 @@ body {
 }
 .sub-form__input:hover, .sub-form__input:focus {
   border-color: var(--accent-color);
+}
+@media screen and (min-width: 480px) {
+  .sub-form__input {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .sub-form__input {
+    width: 358px;
+  }
 }
 
 .portfolio {
