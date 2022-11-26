@@ -49,6 +49,85 @@
             >
           </li>
         </ul>
+        <button class="menu-open" type="button" data-menu-open>
+          <svg width="24" height="17">
+            <use href="./images/symbol-defs.svg#icon-burger"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="mob-menu is-hidden" data-menu>
+        <div class="container">
+          <div class="mob-menu-top">
+            <button class="menu-close" type="button" data-menu-close>
+              <svg width="19" height="19">
+                <use href="./images/symbol-defs.svg#icon-menu-close"></use>
+              </svg>
+            </button>
+            <ul class="mob-menu-list list">
+              <li><a href="#" class="mob-menu-list__link active">Студія</a></li>
+              <li>
+                <a href="./portfolio.html" class="mob-menu-list__link"
+                  >Портфоліо</a
+                >
+              </li>
+              <li><a href="#" class="mob-menu-list__link">Контакти</a></li>
+            </ul>
+          </div>
+          <div class="mob-menu-bottom">
+            <ul class="mob-menu-contact list">
+              <li>
+                <a class="mob-menu-contact__tel" href="tel:+380961111111"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+              <li>
+                <a
+                  class="mob-menu-contact__mail"
+                  href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="mob-menu-soc-list list">
+              <li class="mob-menu-soc-item">
+                <a
+                  class="mob-menu-soc-link"
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  rel="noopener noreferrer nofolow"
+                  >Instagram</a
+                >
+              </li>
+              <li class="mob-menu-soc-item">
+                <a
+                  class="mob-menu-soc-link"
+                  href="https://twitter.com/?lang=uk"
+                  target="_blank"
+                  rel="noopener noreferrer nofolow"
+                  >Twitter</a
+                >
+              </li>
+              <li class="mob-menu-soc-item">
+                <a
+                  class="mob-menu-soc-link"
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  rel="noopener noreferrer nofolow"
+                  >Facebook</a
+                >
+              </li>
+              <li class="mob-menu-soc-item">
+                <a
+                  class="mob-menu-soc-link"
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                  rel="noopener noreferrer nofolow"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <main class="main">
@@ -634,5 +713,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
