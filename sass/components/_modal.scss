@@ -9,7 +9,7 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-window {
-  width: 528px;
+  width: 450px;
   min-height: 581px;
   background-color: var(--background-main-color);
   border-radius: 4px;
@@ -21,6 +21,12 @@
   transition-property: transform, border-radius;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+  }
+  @media screen and (max-width: 479px) {
+    width: 100%;
+  }
 }
 .backdrop.is-hidden .modal-window {
   transform: translate(-50%, -50%) scale(0);
@@ -49,7 +55,6 @@
     fill: var(--background-main-color);
   }
 }
-
 .is-hidden {
   opacity: 0;
   visibility: hidden;
@@ -81,7 +86,6 @@
     border-color: var(--accent-color);
   }
 }
-
 .modal-icon {
   position: absolute;
   left: 12px;
@@ -92,7 +96,6 @@
     fill: var(--accent-color);
   }
 }
-
 .modal-textarea {
   width: 100%;
   height: 120px;
@@ -118,7 +121,6 @@
     color: rgba(117, 117, 117, 0.5);
   }
 }
-
 .modal-textarea-wrap {
   margin-bottom: 20px;
 }
@@ -143,8 +145,8 @@
   justify-content: center;
 }
 .form-conditions {
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--paragraph-text-color);
   display: flex;
@@ -168,13 +170,21 @@
   .input-check:focus + & span {
     border-color: var(--accent-color);
   }
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 .form-conditions-link {
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--accent-color);
   margin-left: 5px;
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 .modal-button-wrap {
   text-align: center;

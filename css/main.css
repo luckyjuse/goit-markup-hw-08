@@ -148,11 +148,15 @@ body {
   padding: 12px 8px;
   border: 0;
   background-color: transparent;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .menu-open {
     display: none;
   }
+}
+.menu-open:hover, .menu-open:focus {
+  fill: var(--accent-color);
 }
 
 .menu-close {
@@ -170,6 +174,9 @@ body {
     display: none;
   }
 }
+.menu-close:hover, .menu-close:focus {
+  fill: var(--accent-color);
+}
 
 .backdrop {
   width: 100%;
@@ -183,7 +190,7 @@ body {
 }
 
 .modal-window {
-  width: 528px;
+  width: 450px;
   min-height: 581px;
   background-color: var(--background-main-color);
   border-radius: 4px;
@@ -195,6 +202,16 @@ body {
   transition-property: transform, border-radius;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 1200px) {
+  .modal-window {
+    width: 528px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .modal-window {
+    width: 100%;
+  }
 }
 
 .backdrop.is-hidden .modal-window {
@@ -334,8 +351,8 @@ body {
 }
 
 .form-conditions {
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--paragraph-text-color);
   display: flex;
@@ -360,13 +377,25 @@ body {
 .input-check:focus + .form-conditions span {
   border-color: var(--accent-color);
 }
+@media screen and (min-width: 1200px) {
+  .form-conditions {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
 
 .form-conditions-link {
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--accent-color);
   margin-left: 5px;
+}
+@media screen and (min-width: 1200px) {
+  .form-conditions-link {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .modal-button-wrap {
@@ -406,6 +435,9 @@ body {
   font-size: 40px;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
+}
+.mob-menu-list__link:hover, .mob-menu-list__link:focus {
+  color: var(--accent-color);
 }
 
 .mob-menu-list__link.active {
